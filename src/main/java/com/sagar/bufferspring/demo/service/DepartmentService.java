@@ -1,6 +1,7 @@
 package com.sagar.bufferspring.demo.service;
 
 import com.sagar.bufferspring.demo.entity.Department;
+import com.sagar.bufferspring.demo.error.DepartmentNotFoundException;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ public interface DepartmentService {
 
     public List<Department> fetchDepartmentList();
 
-    public Department fetchDepartmentById(Long departmentId);
+    public Department fetchDepartmentById(Long departmentId) throws DepartmentNotFoundException;
 
     public void deleteDepartmentById(Long departmentId);
 
